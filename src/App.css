@@ -226,3 +226,8 @@ header nav input[type=button]{
 .hidden{
   display: none;
 }
+/* header*/
+.active-link{
+  color: #bf9345;
+  font-weight: bold;
+}

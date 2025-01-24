@@ -15,10 +15,10 @@ const Fragrance=(props)=>{
                 <section>
                     <h3>{props.fragrance.name} </h3>
                     <p><span>Brand:</span>{props.fragrance.brand} </p>
-                    <p><span>ReleaseYear:</span> {props.fragrance.release_date}</p>
+                    <p><span>Release Date:</span> {props.fragrance.release_date}</p>
                     <p><span>Genre:</span>{props.fragrance.genre}</p>
                     <p><span>Sex:</span> {props.fragrance.sex}</p>
-                    <p><span>Prix:</span> {props.fragrance.price}</p>
+                    <p><span>Price:</span> {props.fragrance.price}</p>
                     <input type="button" value="Add To Cart" onClick={()=>dispatch(ActionCreator.add_to_cart(props.fragrance))} />
                 </section>         
             </section>

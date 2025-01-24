@@ -26,7 +26,7 @@ const ListFragrances=()=>{
             <Header setSearchedTerm={setSearchedTerm} />
             <section className="SelectBar">
                 <div>
-                    <label htmlFor="">Select genre : </label>
+                    <label htmlFor="">Select Sex : </label>
                     <select onChange={(e)=>setSelectedSex(e.target.value)}>
                         <option value="">All</option>
                         <option value="Female">Female</option>
@@ -59,7 +59,7 @@ const ListFragrances=()=>{
                         <option value="Guerlain">Guerlain</option>
                         <option value="Maison Francis Kurkdjian">Maison Francis Kurkdjian</option>
                         <option value="Le Labo">Le Labo</option>
-                        </select>
+                    </select>
                 </div>
                 <div>
                     <label htmlFor="">Sort :</label>
