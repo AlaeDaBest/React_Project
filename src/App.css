@@ -45,14 +45,12 @@ header nav{
   padding: 0.5%;
   width: 700px;
   font-family: monospace;
+  font-size: 1.1em;
 }
 header nav a{
   color: black;
   margin: 3%;
   text-decoration: none;
-}
-header nav a:active{
-  color: #e8a8b3;
 }
 header nav input[type=button]{
   background-color: white;
@@ -230,4 +228,7 @@ header nav input[type=button]{
 .active-link{
   color: #bf9345;
   font-weight: bold;
+}
+.Fragrance_header nav{
+  background-color: rgba(0, 0, 0, 0.253) ;
 }

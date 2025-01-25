@@ -1,23 +1,38 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Header from "../Home/Header";
+import * as ActionCreator from '../../Redux/Creators/ActionsCreators';
+// import multer from "multer";
+import { useDispatch } from "react-redux";
 const CreateFragrance=()=>{
     const [name,setName]=useState('');
     const [brand,setBrand]=useState('');
-    const [picture,setPicture]=useState('');
+    const [imageUrl,setImageUrl]=useState(null);
+    const fileInputRef=useRef(null);
     const [release_date,setRelease_Date]=useState('');
     const [genre,setGenre]=useState('');
     const [price,setPrice]=useState('');
     const [sex,setSex]=useState('');
+    const dispatch=useDispatch();
+    const handleImageChange=(event)=>{
+        const file=event.target.files[0];
+        if(file){
+            const reader=new FileReader();
+            reader.onload=(e)=>setImageUrl(e.target.result);
+            reader.readAsDataURL(file);
+        }
+    };
     function Add(){
         const newFragrance={
             'name':name,
             'release_date':release_date,
             'brand':brand,
             'price':price,
-            'picture':picture,
+            'picture':'/public/Fragrances/'+ imageUrl,
             'genre':genre,
             'sex':sex
         }
+        dispatch(ActionCreator.add_fragrance(newFragrance))
+        console.log('gg')
     }
     return(
         <div>
@@ -31,8 +46,7 @@ const CreateFragrance=()=>{
                             <input type="text" onChange={(e)=>setName(e.target.value)} />
                         </div>
                         <div>
-                            <input type="file" onChange={(e)=>setPicture(e.target.value)} />
-                            <label htmlFor="">Add Photo</label>
+                            <input type="file" ref={fileInputRef} onChange={handleImageChange} />
                         </div>
                     </section>
                     <section>
