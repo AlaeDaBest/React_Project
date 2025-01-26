@@ -21,19 +21,19 @@ export const edit_fragrance = (name, newFragrance) => {
 
 
 
-// ActionsCreators.js
+
 
 export const add_to_favorites = (fragrance) => {
     return {
       type: "ADD_TO_FAVORITES",
-      payload: fragrance, // Le parfum complet
+      payload: fragrance, 
     };
   };
   
   export const remove_from_favorites = (name) => {
     return {
       type: "REMOVE_FROM_FAVORITES",
-      payload: name, // Utilisation du `name` pour supprimer un parfum
+      payload: name, 
     };
   };
   
