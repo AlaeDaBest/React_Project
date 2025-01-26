@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Fragrance from "./Fragrance";
 import * as ActionCreator from '../../Redux/Creators/ActionsCreators';
-import Header from "../Home/Header";
+import Header from "./Header";
 const ListFragrances=()=>{
     const fragrances=useSelector((state)=>state.fragrances);
     const dispatch=useDispatch();
@@ -23,7 +23,7 @@ const ListFragrances=()=>{
     const sortedFragrances=getSortedFragrances();
     return(
         <div>
-            <Header setSearchedTerm={setSearchedTerm} />
+            <Header/>           
             <section className="SelectBar">
                 <div>
                     <label htmlFor="">Select Sex : </label>
