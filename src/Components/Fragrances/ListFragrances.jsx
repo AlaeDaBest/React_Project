@@ -32,16 +32,10 @@ const ListFragrances = () => {
     }
 
     const sortedFragrances = getSortedFragrances();
-
-    // Calculer les indices des éléments à afficher en fonction de la page
     const indexOfLastFragrance = currentPage * itemsPerPage;
     const indexOfFirstFragrance = indexOfLastFragrance - itemsPerPage;
     const currentFragrances = sortedFragrances.slice(indexOfFirstFragrance, indexOfLastFragrance);
-
-    // Calculer le nombre total de pages
     const totalPages = Math.ceil(sortedFragrances.length / itemsPerPage);
-
-    // Fonction pour changer de page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
     return (
