@@ -5,17 +5,17 @@ import { add_to_favorites, remove_from_favorites } from "../../../Redux/Creators
 
 const HeartIcon = ({ fragrance }) => {
   const dispatch = useDispatch();
-  const favorites = useSelector((state) => state.favorites); // On récupère les favoris depuis Redux
+  const favorites = useSelector((state) => state.favorites);
 
-  // Vérifie si le parfum est déjà dans les favoris en utilisant le `name`
+
   const isFavorite = favorites.some((item) => item.name === fragrance.name);
 
   const toggleLike = () => {
     if (isFavorite) {
-      // Si le parfum est déjà dans les favoris, on le supprime
-      dispatch(remove_from_favorites(fragrance.name)); // On utilise `name` pour identifier l'élément
+    
+      dispatch(remove_from_favorites(fragrance.name));
     } else {
-      // Sinon on l'ajoute
+   
       dispatch(add_to_favorites(fragrance));
     }
   };
