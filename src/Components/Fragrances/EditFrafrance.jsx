@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { edit_fragrance } from "../../Redux/Creators/ActionsCreators";
+import Footer from "../Home/Footer";
 
 const EditFragrance = ({ fragrance, onClose }) => {
     const [formData, setFormData] = useState({ ...fragrance });
@@ -137,6 +138,7 @@ const EditFragrance = ({ fragrance, onClose }) => {
                     </button>
                 </div>
             </form>
+            <Footer/>
         </div>
     );
 };

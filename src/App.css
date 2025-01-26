@@ -5,6 +5,7 @@
   top: 0;
   left: 0;
   width: 100%;
+  
 }
 .background img{
   width: 100%;
@@ -170,6 +171,7 @@ header nav input[type=button]{
   transition: all 0.25s ease-in-out;
   font-size: 0.9em;
   font-family: monospace;
+  background-color: white;
 }
 .BookInfo{
   padding: 0px;
@@ -229,3 +231,480 @@ header nav input[type=button]{
   color: #bf9345;
   font-weight: bold;
 }
+
+/* src/About.css */
+
+
+/* Main container */
+.about-container {
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 1200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow for depth effect */
+  background-color: white;
+  border-radius: 12px; /* Rounded corners for a modern touch */
+}
+
+/* Header with text effect */
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #bf9345; /* Gold color for luxury */
+}
+
+.about-header h1 {
+  font-size: 3.5rem;
+  letter-spacing: 2px; /* Letter spacing for more elegance */
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase for a chic effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow for 3D effect */
+  transition: text-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+.about-header h1:hover {
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+/* Content */
+.about-content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 40px;
+}
+
+.about-content p {
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Values section */
+.about-values {
+  margin-top: 50px;
+}
+
+.about-values h2 {
+  font-size: 2.5rem;
+  color: #dea74a; /* Lighter gold for elegance */
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #dea74a; /* Decorative line under the title */
+  padding-bottom: 10px;
+}
+
+.about-values ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2-column grid for stylish layout */
+  gap: 20px;
+}
+
+.about-values li {
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  transition: color 0.3s ease;
+}
+
+.about-values li:hover {
+  color: #bf9345; /* Change color on hover */
+}
+
+/* Vision section */
+.about-vision {
+  margin-top: 60px;
+}
+
+.about-vision h2 {
+  font-size: 2.5rem;
+  color: #dea74a;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #dea74a;
+  padding-bottom: 10px;
+}
+
+.about-vision p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+
+/* Adding a boutique image with zoom effect */
+.about-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image:hover {
+  transform: scale(1.05); /* Zoom on image hover */
+}
+.RemoveButton {
+  background-color: #dea74a; /* Couleur dorée */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px; /* Coins arrondis */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold; /* Texte en gras */
+  transition: background-color 0.3s ease; /* Animation douce */
+}
+
+.RemoveButton:hover {
+  background-color: #bf9345; /* Couleur dorée plus foncée au survol */
+}
+.Fragrance_header nav{
+  background-color: rgba(0, 0, 0, 0.253) ;
+}
+/* Style général pour la page CreateFragrance */
+
+
+/* Conteneur principal */
+.create-fragrance-container {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f7f7f7, #e3cfa8); /* Dégradé léger */
+  padding: 30px;
+  margin: 0;
+  min-height: 100vh; /* Pour s'assurer que la page occupe toute la hauteur */
+}
+
+/* Section du formulaire */
+.form-section {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h1 {
+  text-align: center;
+  font-size: 28px;
+  color:#bf9345;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Formulaire */
+.fragrance-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Groupes d'inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-weight: bold;
+  color: #5b3d22; /* Couleur plus chaude pour le texte des labels */
+}
+
+.input-group input,
+.input-group select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Couleur spécifique pour le champ image */
+.input-group input[type="file"] {
+  font-size: 14px;
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Boutons et actions */
+.submit-button {
+  padding: 12px 20px;
+  background-color: #dea74a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.submit-button:hover {
+  background-color: #bf9345; /* Changer la couleur au survol */
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Groupe de boutons radio */
+.input-group input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Redirection et retour à la page */
+.form-actions {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: #e0b97b; /* Couleur dorée pour le titre */
+}
+
+/* Formulaire - Modifications globales */
+.fragrance-form input,
+.fragrance-form select,
+.fragrance-form textarea {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Conteneur du formulaire */
+.form-section {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Conteneur des filtres */
+.SelectBar {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+/* Style général pour les éléments select */
+.SelectBar select {
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color:  #dea74a;
+  color: #fff;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  width: 220px; /* Assure une largeur constante */
+  box-sizing: border-box;
+}
+
+/* Focus pour les éléments select */
+.SelectBar select:focus {
+  outline: none;
+  border-color: #dea74a;
+  background-color: #fff;
+}
+
+/* Survol des éléments select */
+.SelectBar select:hover {
+  border-color: #bf9345;
+  background-color:  #dea74a;
+}
+
+/* Style des labels */
+.SelectBar label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-right: 10px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+
+.SelectBar div {
+  margin-top: 40px;
+}
+.body{
+  background: linear-gradient(135deg, #f7f0e1, #bf9345); /* Un dégradé doux entre une couleur crème et une teinte dorée */
+  
+  margin: 0;
+  padding: 0;
+  line-height: 1.8;
+}
+.title{
+  color: #bf9345; /* Couleur qui se rapproche de celle de la boutique */
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  background-color: #bf9345;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.pagination-btn:hover {
+  background-color: #dea74a;
+}
+
+.pagination-info {
+  font-size: 1rem;
+  color: #333;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, #e8d9b9, #f1e1b4);  /* Dégradé doux de couleurs neutres */
+  font-family: 'Playfair Display', serif; 
+  margin: 0;
+}
+
+.login-form {
+  background-color: #ffffff; 
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.brand-name {
+  font-size: 32px;
+  font-weight: bold;
+  color: #bf9345;  /* Couleur principale du projet */
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #dea74a;  /* Couleur secondaire du projet */
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #dea74a;  /* Couleur secondaire du projet */
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #e7cfe9;  /* Gris clair pour un léger contraste */
+  border-radius: 8px;
+  box-sizing: border-box;
+  background-color: #fdfafc;  /* Blanc cassé pour un fond doux */
+  transition: border-color 0.3s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #bf9345;  /* Utilisation de la couleur principale sur focus */
+}
+
+.login-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: #bf9345;  /* Couleur principale du projet */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #dea74a;  /* Couleur secondaire du projet sur hover */
+}
+
+.login-container {
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.login-btn:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px rgba(191, 147, 69, 0.6);  /* Ombre avec couleur principale */
+}
+/* Style pour le Footer */
+.footer {
+  background-color: #bf9345;  /* Utilise la couleur de ton projet */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 16px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+

@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Home/Header";
+import Footer from "../Home/Footer";
 
 const About = () => {
   return (
@@ -38,8 +39,12 @@ const About = () => {
           </p>
         </div>
       </div>
+      <Footer/>
     </div>
+
   );
 };
 
 export default About;
+
+

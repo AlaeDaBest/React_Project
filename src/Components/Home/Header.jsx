@@ -11,6 +11,7 @@ const Header=(props)=>{
                     <NavLink to='/addFragrance' className={({isActive})=>(isActive? 'active-link':'')} >Add </NavLink>
                 </div>
                 <div>
+                   <Link to='/login'>Login</Link>
                     <Link to='/cart'>Cart</Link>
                     <Link to='/favorites'>Favorites</Link>
                 </div>

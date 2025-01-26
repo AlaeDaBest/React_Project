@@ -9,6 +9,7 @@ import ListFavorites from './Components/Favorites/ListFavorites'
 import ListCart from './Components/Cart/ListCart'
 import CreateFragrance from './Components/Fragrances/CreateFragrance'
 import About from './Components/About/About'
+import Login from './Components/Login/Login'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -17,7 +18,8 @@ function App() {
       <Provider store={store}>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='about' element={<About/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/login' element={<Login/>} />
           <Route path='/fragrances' element={<ListFragrances/>} />
           <Route path='/favorites' element={<ListFavorites/>} />
           <Route path='/cart' element={<ListCart/>} />
