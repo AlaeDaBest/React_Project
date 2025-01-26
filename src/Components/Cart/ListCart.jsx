@@ -6,23 +6,15 @@ import { remove_from_cart } from "../../Redux/Creators/ActionsCreators";
 import Footer from "../Home/Footer";
 
 const ListCart = () => {
-  const cart = useSelector((state) => state.cart); // Les articles du panier
+  const cart = useSelector((state) => state.cart); 
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
-
-  // Calculer l'index du premier et du dernier élément à afficher pour la page courante
-  const indexOfLastFragrance = currentPage * itemsPerPage;
+   const indexOfLastFragrance = currentPage * itemsPerPage;
   const indexOfFirstFragrance = indexOfLastFragrance - itemsPerPage;
-
-  // Diviser le panier en pages
-  const currentCart = cart.slice(indexOfFirstFragrance, indexOfLastFragrance);
-
-  // Fonction pour changer de page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // Calculer le nombre total de pages
-  const totalPages = Math.ceil(cart.length / itemsPerPage);
+   const currentCart = cart.slice(indexOfFirstFragrance, indexOfLastFragrance);
+   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+   const totalPages = Math.ceil(cart.length / itemsPerPage);
 
   const handleRemove = (name) => {
     dispatch(remove_from_cart(name)); // Supprime un parfum spécifique
@@ -50,7 +42,7 @@ const ListCart = () => {
         )}
       </div>
 
-      {/* Pagination */}
+    
       <div className="pagination">
         <button
           onClick={() => paginate(currentPage - 1)}
