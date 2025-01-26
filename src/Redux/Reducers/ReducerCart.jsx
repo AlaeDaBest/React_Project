@@ -1,15 +1,18 @@
 import * as ActionType from '../Actions/ActionsTypes';
-const initial_state=[];
-const ReducerCart=(state=initial_state,action)=>{
-    let newState=initial_state;
-    switch(action.type){
-        case ActionType.ADD_TO_CART:
-            newState=[...state,action.payload];
-        break;
-        case ActionType.REMOVE_FROM_CART:
-            newState=state.filter((item)=>item.id!=action.payload);
-        break;
+
+const initial_state = [];
+
+const ReducerCart = (state = initial_state, action) => {
+    switch (action.type) {
+        case "ADD_TO_CART":
+            return [...state, action.payload]; // Ajoute le parfum au panier
+        case "REMOVE_FROM_CART":
+            // Garde uniquement les parfums qui n'ont pas le même nom que celui à supprimer
+            return state.filter((item) => item.name !== action.payload); 
+        default:
+            return state;
     }
-    return newState;
-}
+};
+
 export default ReducerCart;
+

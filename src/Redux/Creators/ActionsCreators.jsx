@@ -5,42 +5,56 @@ export const add_fragrance=(fragrance)=>{
         payload:fragrance
     }
 } 
-export const delete_fragrance=(id)=>{
-    return{
-        type:ActionType.DELETE_FRAGRANCE,
-        payload:id
-    }
-}
-export const edit_fragrance=(id,newFragrance)=>{
-    return{
-        type:ActionType.EDIT_FRAGRANCE,
-        payload:{id,newFragrance}
-    }
-}
-export const add_to_favorites=(fragrance)=>{
-    return{
-        type:ActionType.ADD_TO_FAVORITES,
-        payload:{fragrance}
-    }
-}
-export const remove_from_favorites=(name)=>{
-    return{
-        type:ActionType.REMOVE_FROM_FAVORITES,
-        payload:name
-    }
-}
-export const add_to_cart=(fragrance)=>{
-    return{
-        type:ActionType.ADD_TO_CART,
-        payload:fragrance
-    }
-}
-export const remove_from_cart=(id)=>{
-    return{
-        type:ActionType.REMOVE_FROM_CART,
-        payload:id
-    }
-}
+export const delete_fragrance = (name) => {
+    return {
+        type: ActionType.DELETE_FRAGRANCE,
+        payload: name,
+    };
+};
+export const edit_fragrance = (name, newFragrance) => {
+    return {
+        type: ActionType.EDIT_FRAGRANCE,
+        payload: { name, newFragrance }
+    };
+};
+
+
+
+
+// ActionsCreators.js
+
+export const add_to_favorites = (fragrance) => {
+    return {
+      type: "ADD_TO_FAVORITES",
+      payload: fragrance, // Le parfum complet
+    };
+  };
+  
+  export const remove_from_favorites = (name) => {
+    return {
+      type: "REMOVE_FROM_FAVORITES",
+      payload: name, // Utilisation du `name` pour supprimer un parfum
+    };
+  };
+  
+  
+  
+  
+
+  export const add_to_cart = (fragrance) => {
+    return {
+        type: "ADD_TO_CART",
+        payload: fragrance, // L'objet complet du parfum
+    };
+};
+
+export const remove_from_cart = (name) => {
+    return {
+        type: "REMOVE_FROM_CART",
+        payload: name, // Nom du parfum à supprimer
+    };
+};
+
 export const search_by_sex=(sex)=>{
     return{
         type:ActionType.SEARCH_BY_SEX,

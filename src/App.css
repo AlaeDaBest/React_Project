@@ -231,3 +231,139 @@ header nav input[type=button]{
   color: #bf9345;
   font-weight: bold;
 }
+/* src/About.css */
+
+
+/* Main container */
+.about-container {
+  margin: 0 auto;
+  padding: 50px;
+  max-width: 1200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Shadow for depth effect */
+  background-color: white;
+  border-radius: 12px; /* Rounded corners for a modern touch */
+}
+
+/* Header with text effect */
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #bf9345; /* Gold color for luxury */
+}
+
+.about-header h1 {
+  font-size: 3.5rem;
+  letter-spacing: 2px; /* Letter spacing for more elegance */
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase for a chic effect */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow for 3D effect */
+  transition: text-shadow 0.3s ease; /* Smooth transition on hover */
+}
+
+.about-header h1:hover {
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+/* Content */
+.about-content {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 40px;
+}
+
+.about-content p {
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Values section */
+.about-values {
+  margin-top: 50px;
+}
+
+.about-values h2 {
+  font-size: 2.5rem;
+  color: #dea74a; /* Lighter gold for elegance */
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #dea74a; /* Decorative line under the title */
+  padding-bottom: 10px;
+}
+
+.about-values ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2-column grid for stylish layout */
+  gap: 20px;
+}
+
+.about-values li {
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  transition: color 0.3s ease;
+}
+
+.about-values li:hover {
+  color: #bf9345; /* Change color on hover */
+}
+
+/* Vision section */
+.about-vision {
+  margin-top: 60px;
+}
+
+.about-vision h2 {
+  font-size: 2.5rem;
+  color: #dea74a;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #dea74a;
+  padding-bottom: 10px;
+}
+
+.about-vision p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+  color: #4a4a4a;
+  margin-bottom: 30px;
+}
+
+/* Adding a boutique image with zoom effect */
+.about-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-image:hover {
+  transform: scale(1.05); /* Zoom on image hover */
+}
+.RemoveButton {
+  background-color: #dea74a; /* Couleur dorée */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px; /* Coins arrondis */
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold; /* Texte en gras */
+  transition: background-color 0.3s ease; /* Animation douce */
+}
+
+.RemoveButton:hover {
+  background-color: #bf9345; /* Couleur dorée plus foncée au survol */
+}
+
+

@@ -322,11 +322,16 @@ const ReducerFragrance=(state=initial_state,action)=>{
           newState=[...state,action.payload];
         break;
         case ActionType.DELETE_FRAGRANCE:
-          newState=state.filter((item)=>item.id!=action.payload);
-        break;
+          newState = state.filter((item) => item.name !== action.payload); 
+          break;
         case ActionType.EDIT_FRAGRANCE:
-          newState=state.map((item)=>item.id==action.payload.id?action.payload.newFragrance:item);
-        break;
+  newState = state.map((item) =>
+    item.name === action.payload.name ? { ...item, ...action.payload.newFragrance } : item
+  );
+  break;
+
+          break;
+      
         case ActionType.SEARCH_BY_SEX:
           newState = action.payload? state.filter((item) => item.sex === action.payload): [...state];
         break;
