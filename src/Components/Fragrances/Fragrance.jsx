@@ -2,17 +2,17 @@ import React, { useState } from "react";
 import HeartIcon from "./Icons/HeartIcon";
 import { useDispatch } from "react-redux";
 import * as ActionCreator from "../../Redux/Creators/ActionsCreators";
-import EditFragrance from "./EditFrafrance"; // Composant pour modifier la fragrance
+import EditFragrance from "./EditFrafrance"; 
 
 const Fragrance = (props) => {
     const [hidden, setHidden] = useState(true);
-    const [isButtonDisabled, setIsButtonDisabled] = useState(false); // Gère l'état du bouton
-    const [isEditing, setIsEditing] = useState(false); // Gère l'affichage du formulaire d'édition
+    const [isButtonDisabled, setIsButtonDisabled] = useState(false); 
+    const [isEditing, setIsEditing] = useState(false); 
     const dispatch = useDispatch();
 
     const handleAddToCart = () => {
-        dispatch(ActionCreator.add_to_cart(props.fragrance)); // Ajoute au panier
-        setIsButtonDisabled(true); // Désactive le bouton
+        dispatch(ActionCreator.add_to_cart(props.fragrance));
+        setIsButtonDisabled(true); 
     };
 
     const handleEdit = () => {
@@ -20,7 +20,7 @@ const Fragrance = (props) => {
     };
 
     const handleDelete = () => {
-        dispatch(ActionCreator.delete_fragrance(props.fragrance.name)); // Supprime la fragrance
+        dispatch(ActionCreator.delete_fragrance(props.fragrance.name)); 
     };
 
     return (
@@ -50,7 +50,7 @@ const Fragrance = (props) => {
 
                     <input
                         type="button"
-                        value={isButtonDisabled ? "Added to Cart" : "Add To Cart"} // Change le texte
+                        value={isButtonDisabled ? "Added to Cart" : "Add To Cart"} 
                         onClick={handleAddToCart}
                         disabled={isButtonDisabled} // Désactive après clic
                         style={{
