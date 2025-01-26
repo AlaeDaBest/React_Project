@@ -5,21 +5,13 @@ import Fragrance from "../Fragrances/Fragrance";
 import Footer from "../Home/Footer";
 
 const ListFavorites = () => {
-  const favorites = useSelector((state) => state.favorites); // Les favoris du store Redux
+  const favorites = useSelector((state) => state.favorites); 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
-
-  // Calculer l'index du premier et du dernier élément à afficher pour la page courante
-  const indexOfLastFragrance = currentPage * itemsPerPage;
+   const indexOfLastFragrance = currentPage * itemsPerPage;
   const indexOfFirstFragrance = indexOfLastFragrance - itemsPerPage;
-
-  // Diviser les favoris en pages
-  const currentFavorites = favorites.slice(indexOfFirstFragrance, indexOfLastFragrance);
-
-  // Fonction pour changer de page
+   const currentFavorites = favorites.slice(indexOfFirstFragrance, indexOfLastFragrance);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-
-  // Calculer le nombre total de pages
   const totalPages = Math.ceil(favorites.length / itemsPerPage);
 
   return (
@@ -38,7 +30,7 @@ const ListFavorites = () => {
         )}
       </div>
 
-      {/* Pagination */}
+
       <div className="pagination">
                 <button
                     onClick={() => paginate(currentPage - 1)}
