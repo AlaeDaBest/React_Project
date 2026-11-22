@@ -32,7 +32,6 @@ const CreateFragrance=()=>{
             'sex':sex
         }
         dispatch(ActionCreator.add_fragrance(newFragrance))
-        console.log('gg')
     }
     return(
         <div>
